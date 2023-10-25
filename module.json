@@ -1,0 +1,77 @@
+{
+	"name":"LS Wing MIDI",
+	"type":"MIDI",
+	"path":"MIDI Control",
+	
+	"version":"1.0",
+	"description":"Special MIDI Module LS Wing controlers in MIDI-Mode",
+	"url":"",
+	"downloadURL":"",
+	
+	"hasInput":true,
+	"hasOutput":true, 
+
+	"hideDefaultCommands":false,
+
+
+
+	"parameters":
+	{
+	
+		
+	},
+
+	"defaults":
+	{		
+		"devices":["LS Wing","LS Wing"],
+		"autoAdd":false
+	},
+
+	"hideDefaultParameters":
+	[
+		"autoAdd",
+		"autoFeedback",
+		"useHierarchy"
+	],
+
+
+	"scripts":
+	[
+		"lswing_midi.js" ],
+
+	"values":
+	{ },
+	
+	
+"commands":
+	{		
+	
+	"Send ControlChange" : {
+			"menu" : "",
+			"callback" : "send_control",
+			"parameters" : {
+			
+			"MIDI Channel": {
+					"type": "Integer",
+					"default": 1, 
+					"min":1,
+					"max":16,
+					"useForMapping": true },
+					
+			"Set Controler N°": {
+					"type": "Integer",
+					"default": 1, 
+					"min":0,
+					"max":127,
+					"useForMapping": true },
+					
+			"Set Value": {
+					"type": "Integer",
+					"default": 1, 
+					"min":0,
+					"max":127,
+					"useForMapping": true }
+		}  },
+		
+		
+} }
