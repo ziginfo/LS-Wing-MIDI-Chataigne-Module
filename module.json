@@ -5,8 +5,8 @@
 	
 	"version":"1.0",
 	"description":"Special MIDI Module LS Wing controlers in MIDI-Mode",
-	"url":"",
-	"downloadURL":"",
+	"url":"https://github.com/ziginfo/LS-Wing-MIDI-Chataigne-Module",
+	"downloadURL":"https://github.com/ziginfo/LS-Wing-MIDI-Chataigne-Module/archive/refs/heads/main.zip",
 	
 	"hasInput":true,
 	"hasOutput":true, 
