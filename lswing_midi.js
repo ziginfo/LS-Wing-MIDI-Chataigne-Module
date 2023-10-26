@@ -14,12 +14,13 @@ function init() {
 		n= i+61 ;
 		faders.addFloatParameter("Fader "+(i), "", 0, 0, 127);  }	
 	
-
+/*
 //Buttons Containers
 	buttcont = local.values.addContainer("Buttons");
 	buttcont.setCollapsed(true);
-//Buttons Containers
-				
+	*/
+
+//Buttons Containers			
 	buttons = local.values.buttons.addContainer("Buttons Row1");
 	buttons.setCollapsed(true);
 		for (var i = 1; i<=10; i++) {

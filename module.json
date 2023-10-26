@@ -40,7 +40,12 @@
 		"lswing_midi.js" ],
 
 	"values":
-	{ },
+	{ 
+		
+		"Buttons":{
+			"type":"Container",
+			"collapsed":true}
+			},
 	
 	
 "commands":
@@ -139,7 +144,7 @@
 	"Reset All Colors" : {
 			"menu" : "Control",
 			"callback" : "reset_colors"
-		   },
+		   }
 		
 		
 		
