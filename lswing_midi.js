@@ -65,8 +65,6 @@ function ccEvent(channel, number, value)
 		 if(number >= 31 && number <= 40){
   			var i= number-10;
 			local.values.buttons.buttonsRow3.getChild("Button"+i).set(value); }
-			
-		
  }
  
  function reset(){
@@ -126,7 +124,7 @@ function noteOffEvent(channel, pitch, velocity)
 }
 
 function moduleValueChanged(value)  { 
-		if(local.values.buttons.buttonsRow3.reset(value))  {
+		if(local.values.buttons.buttonsRow3.reset.get)  {
 			for (var i = 31; i<=40; i++) {
  			var n= i-10;
 			local.values.buttons.buttonsRow3.getChild("Button"+n).set(0);}  }  
@@ -139,5 +137,25 @@ function moduleValueChanged(value)  {
 
 function send_control(channel, number, value) {
 	local.sendCC (channel, number, value);
+}
+
+function set_color(row, number, value) {
+	var channel = 1 ;
+	var number = (row*10) + number ;
+	if (row == 3){
+		local.sendCC (channel, number, value);}
+	else {	
+		local.sendNoteOn(channel, number, value);}
+}
+
+function send_note(channel, pitch, velocity) {
+	local.sendNoteOn(channel, pitch, velocity);
+}
+
+function reset_colors() {
+	for (no = 1; no<=20; no++) {
+	local.sendNoteOff(1, no); }
+	for (no = 31; no<=40; no++) {
+	local.sendCC (1, no, 0);}
 }
 
